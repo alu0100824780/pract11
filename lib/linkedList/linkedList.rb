@@ -86,7 +86,16 @@ module LinkedList
            def empty
 	      @Size == 0
 	   end
-	   
+
+           def to_s
+               aux = []
+               aux = sort_by { |x| x.Author[0].surnames }
+               aux2 = ''
+               for i in 0..aux.size-1
+                  aux2 += aux[i].get_APA_authors
+               end
+               aux2
+           end
         end
   # Your code goes here...
 end

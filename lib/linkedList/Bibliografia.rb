@@ -63,9 +63,7 @@ module Bibliografia
  	    for i in 0..@Author.size-1
  	    	a += @Author[i].surnames + ", " + @Author[i].initial + ".\n"
  	    end
-            puts "APA ES " + a
             a
-            # @Author[0].surnames + ", " + @Author[0].initial + ".\n"
         end
 
         
