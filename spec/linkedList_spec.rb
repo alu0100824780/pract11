@@ -144,10 +144,6 @@ describe Bibliografia::Book do
             expect(@b.is_a?BasicObject).to eq true
 	end
 
-	it "has an author" do
-	    @b.add_author("Rudolf Cicko")
-	    expect(@b.Author[0]).to eq "Rudolf Cicko"
-	end
 end
 
 
@@ -168,10 +164,6 @@ describe Bibliografia::Revista do
             expect(@r.is_a?BasicObject).to eq true
 	end
 
-	it "has an author" do
-	   @r.add_author("Rudolf Cicko")
- 	   expect(@r.Author[0]).to eq "Rudolf Cicko"
-	end
 	
 	it "has an ISSN number" do
 	   @r.add_ISSN(23)
@@ -227,5 +219,15 @@ describe "Bibliografia" do
         @r.set_publication(4,3,2013)
 	expect(@b <=> @r).to eq 1
      end
+
+     # Práctica 10
+     context "APA Format" do
+       it "have correct name and surname format" do
+         @b2 = Bibliografia::Book.new
+	 @b2.add_author("Marcelo Raul Perez Vazquez Pereyra Jamon")
+	 expect(@b2.get_APA_authors).to eq "Raul Perez Vazquez Pereyra Jamon, M.\n"
+       end	  
+     end
+
 end
 
