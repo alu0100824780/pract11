@@ -70,7 +70,10 @@ module Bibliografia
         def get_APA_authors
             a = ''
  	    for i in 0..@Author.size-1
- 	    	a += @Author[i].surnames + ", " + @Author[i].initial + ". "
+ 	    	a += @Author[i].surnames + ", " + @Author[i].initial + ". "	
+		if i < @Author.size-1
+			a += "& "
+                end
  	    end
             a
         end

@@ -237,7 +237,7 @@ describe "Practica 10" do
 
 
      context "Sorted list" do
-       # Apartado 2
+       # Apartado 2 & Apartado 3
        it "have sorted list by first author surname" do
 	     @l = LinkedList::List.new
 	     @b1 = Bibliografia::Book.new
@@ -259,6 +259,13 @@ describe "Practica 10" do
 
              puts @l.to_s
       
+       end
+
+       it "have & symbol between author names" do
+	   @b = Bibliografia::Book.new
+	   @b.add_author("Rudolf Cicko")
+           @b.add_author("Eleazar Diaz")
+           expect(@b.get_APA_authors).to eq "Cicko, R. & Diaz, E. "
        end
 
 

@@ -261,6 +261,14 @@ describe "Practica 10" do
       
        end
 
+       # Apartado 6
+       it "have & symbol between author names" do
+	   @b = Bibliografia::Book.new
+	   @b.add_author("Rudolf Cicko")
+           @b.add_author("Eleazar Diaz")
+           expect(@b.get_APA_authors).to eq "Cicko, R. & Diaz, E. "
+       end
+
 
     end
 	
