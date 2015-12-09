@@ -13,10 +13,14 @@ module Bibliografia
              aux = @Author[0].surnames <=> other.Author[0].surnames
              puts aux
 	     if( aux == 0)
+               if @Author.size == other.Author.size
                 for i in 1..@Author.size-1 do
 			aux = @Author[i].surnames <=> other.Author[i].surnames
-		
-		aux = @Fecha_Publication <=> other.Fecha_Publication
+                end
+	       end
+                if aux == 0
+			aux = @Fecha_Publication <=> other.Fecha_Publication
+                end
 	     end
              aux
 	end	
@@ -66,7 +70,7 @@ module Bibliografia
         def get_APA_authors
             a = ''
  	    for i in 0..@Author.size-1
- 	    	a += @Author[i].surnames + ", " + @Author[i].initial + "."
+ 	    	a += @Author[i].surnames + ", " + @Author[i].initial + ". "
  	    end
             a
         end
