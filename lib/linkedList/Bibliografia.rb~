@@ -72,7 +72,7 @@ module Bibliografia
  	    for i in 0..@Author.size-1
  	    	a += @Author[i].surnames + ", " + @Author[i].initial + ". "	
 		if i < @Author.size-1
-			a += " & "
+			a += "& "
                 end
  	    end
             a
@@ -82,6 +82,10 @@ module Bibliografia
 	def get_APA_date
 	    "(" + @Fecha_Publication.to_s + ")"
         end
+
+        def get_APA_title
+   	  aux = @Title.split
+          aux.each{ |x| if 
 
 	def get_APA
 	    a = get_APA_authors

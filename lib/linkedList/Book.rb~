@@ -5,12 +5,16 @@ module Bibliografia
 		attr_reader :ISBN
 		
 		def initialize
+		    super
 	            @ISBN = []
 		end
 
 	        def add_ISBN(num)
        	    	    @ISBN << num
-	        end	
+	        end
+
+                def get_APA_title
+		   "Título del libro: " + super.Title	
 	
 	end
 end

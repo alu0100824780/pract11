@@ -83,6 +83,7 @@ module Bibliografia
 	    "(" + @Fecha_Publication.to_s + ")"
         end
 
+
 	def get_APA
 	    a = get_APA_authors
             a += get_APA_date

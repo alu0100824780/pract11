@@ -220,6 +220,11 @@ describe "Bibliografia" do
 	expect(@b <=> @r).to eq 1
      end
 
+     it "create correctly" do
+	expect(@b.class).to eq Bibliografia::Book
+     end
+
+
 end
 
 

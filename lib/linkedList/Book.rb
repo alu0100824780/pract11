@@ -11,7 +11,11 @@ module Bibliografia
 
 	        def add_ISBN(num)
        	    	    @ISBN << num
-	        end	
+	        end
+
+                def get_APA_title
+		   "Título del libro: " + super.Title	
+                end
 	
 	end
 end
