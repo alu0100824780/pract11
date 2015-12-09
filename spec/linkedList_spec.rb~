@@ -221,7 +221,7 @@ describe "Bibliografia" do
      end
 
      it "create correctly" do
-	expect(Bibliografia::Book.new).to not eq nil
+	expect(@b.class).to eq Bibliografia::Book
      end
 
 
