@@ -89,10 +89,11 @@ module LinkedList
 
            def to_s
                aux = []
-               aux = sort_by { |x| x.Author[0].surnames }
+               aux = sort
+#               if (aux.each
                aux2 = ''
                for i in 0..aux.size-1
-                  aux2 += aux[i].get_APA_authors
+                  aux2 += aux[i].get_APA
                end
                aux2
            end

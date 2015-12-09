@@ -8,9 +8,14 @@ module Bibliografia
 	include Comparable
 
 	def <=> (other)
+             print "vamos a comparar\n"
              return nil unless !other.is_a? Bibliografia::Bibliografia
-             aux = @Author <=> other.Author 
+             aux = @Author[0].surnames <=> other.Author[0].surnames
+             puts aux
 	     if( aux == 0)
+                for i in 1..@Author.size-1 do
+			aux = @Author[i].surnames <=> other.Author[i].surnames
+		
 		aux = @Fecha_Publication <=> other.Fecha_Publication
 	     end
              aux
@@ -61,12 +66,22 @@ module Bibliografia
         def get_APA_authors
             a = ''
  	    for i in 0..@Author.size-1
- 	    	a += @Author[i].surnames + ", " + @Author[i].initial + ".\n"
+ 	    	a += @Author[i].surnames + ", " + @Author[i].initial + "."
  	    end
-            puts "APA ES " + a
             a
-            # @Author[0].surnames + ", " + @Author[0].initial + ".\n"
         end
+
+
+	def get_APA_date
+	    "( " + @Fecha_Publication.to_s + " )"
+        end
+
+	def get_APA
+	    a = get_APA_authors
+            a += get_APA_date
+            a += "\n"
+            a
+	end
 
         
         
