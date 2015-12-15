@@ -10,6 +10,13 @@ describe "Practica 11 : Metaprogramming" do
 		end
 		expect(@book.get_APA_authors).to eq "Cicko, R. "
 	end
+
+	it "can create Book with title" do
+		@book = Bibliografia::Book.new do
+			title "Ruby Programming"
+		end
+		expect(@book.get_APA_title).to eq "Ruby Programming"
+	end
 end
 		 	
 
