@@ -12,6 +12,10 @@ module Bibliografia
 	        def add_ISBN(num)
        	    	    @ISBN << num
 	        end
+
+		def get_ISBN
+		    @ISBN
+		end
 	
 	end
 end
