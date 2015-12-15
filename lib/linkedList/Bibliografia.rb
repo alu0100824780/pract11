@@ -82,6 +82,10 @@ module Bibliografia
 	    "(" + @Fecha_Publication.to_s + ")"
         end
 
+	def get_APA_title
+	    @Title
+	end
+
 
 	def get_APA
 	    a = get_APA_authors
@@ -96,6 +100,10 @@ module Bibliografia
 		aux = name.split  
                 @Author << autor = Author.new(aux[1..-1].join(" "),aux[0][0].capitalize) 
         end
+
+	def title(tit)
+		set_title(tit)
+	end
 	   
 
 
