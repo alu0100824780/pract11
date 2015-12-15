@@ -25,6 +25,13 @@ describe "Practica 11 : Metaprogramming" do
 		expect(@book.get_APA_date).to eq "(1994)"
 	end
 
+	it "can create Book with editorial" do
+		@book = Bibliografia::Book.new do
+			editorial "Anaya"
+		end
+		expect(@book.get_APA_editorial).to eq "Anaya"
+	end
+
 	
 end
 		 	

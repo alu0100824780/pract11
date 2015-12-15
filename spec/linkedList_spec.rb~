@@ -22,7 +22,7 @@ describe "Practica 11 : Metaprogramming" do
 		@book = Bibliografia::Book.new do
 			publication [23,8,1994]
 		end
-		expect(@book.get_APA_date).to eq "1994"
+		expect(@book.get_APA_date).to eq "(1994)"
 	end
 
 	
