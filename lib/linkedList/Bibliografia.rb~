@@ -79,11 +79,15 @@ module Bibliografia
 
 
 	def get_APA_date
-	    "(" + @Fecha_Publication.to_s + ")"
+	    "(" + @Fecha_Publication.year.to_s + ")"
         end
 
 	def get_APA_title
 	    @Title
+	end
+
+	def get_APA_editorial
+            @Editorial
 	end
 
 

@@ -86,6 +86,10 @@ module Bibliografia
 	    @Title
 	end
 
+	def get_APA_editorial
+            @Editorial
+	end
+
 
 
 
@@ -110,6 +114,10 @@ module Bibliografia
 
 	def publication(fecha)
 		set_publication(fecha[0],fecha[1],fecha[2])
+	end
+
+	def editorial(edi)
+		@Editorial = edi
 	end
 	   
 
