@@ -27,22 +27,22 @@ module Bibliografia
 	
         attr_reader :Author, :Title, :Serie, :Editorial, :Edicion
         attr_reader :Fecha_Publication
-        def initialize 
-            @Author = ["Sin autores"]
+        def initialize (&block)
+            @Author = []
             @Title = "Sin titulo"
             @Serie = nil
             @Editorial = "Editorial sin definir"
             @Edicion = 0
             @Fecha_Publication = Date.new(1990,1,1)
+
+	    instance_eval &block
+
         end
         
 	#El nombre se pasa normal es decir: Nombre Apellido1 Apellido2..
         def add_author(name)
                 aux = name.split
                 autor = Author.new(aux[1..-1].join(" "),aux[0][0].capitalize)
-            if(@Author[0] == "Sin autores")
-                @Author[0] = autor
-            else
                 @Author << autor 
             end
         end
@@ -83,9 +83,6 @@ module Bibliografia
 	    "(" + @Fecha_Publication.to_s + ")"
         end
 
-        def get_APA_title
-   	  aux = @Title.split
-          aux.each{ |x| if 
 
 	def get_APA
 	    a = get_APA_authors
@@ -94,16 +91,14 @@ module Bibliografia
             a
 	end
 
-        
-        
-       # def get_formato
-       #     a = @Author.join(", ") +"\n"+@Title.to_s+"\n"+@Serie.to_s+
-       #     "; "+@Edicion.to_s+" edition ("+@Fecha_Publication.to_s+")\n"
-       #     for i in 0..@ISBN.size-1 do
-       #         a += @ISBN[i] + "\n"
-       #     end
-#	    a += "\n\n"
-#            a
-#        end
+	# PRáctica 11
+
+	def author(name)
+		aux = name.split  
+                @Author << autor = Author.new(aux[1..-1].join(" "),aux[0][0].capitalize) 
+        end
+	   
+
+
    end
 end

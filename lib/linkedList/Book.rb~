@@ -15,6 +15,7 @@ module Bibliografia
 
                 def get_APA_title
 		   "Título del libro: " + super.Title	
+                end
 	
 	end
 end
