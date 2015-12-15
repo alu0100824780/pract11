@@ -17,6 +17,15 @@ describe "Practica 11 : Metaprogramming" do
 		end
 		expect(@book.get_APA_title).to eq "Ruby Programming"
 	end
+
+	it "can create Book with publication year" do
+		@book = Bibliografia::Book.new do
+			publication [23,8,1994]
+		end
+		expect(@book.get_APA_date).to eq "1994"
+	end
+
+	
 end
 		 	
 

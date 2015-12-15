@@ -87,12 +87,15 @@ module Bibliografia
 	end
 
 
+
+
 	def get_APA
 	    a = get_APA_authors
             a += get_APA_date
             a += "\n"
             a
 	end
+
 
 	# PRáctica 11
 
@@ -103,6 +106,10 @@ module Bibliografia
 
 	def title(tit)
 		set_title(tit)
+	end
+
+	def publication(fecha)
+		set_publication(fecha[0],fecha[1],fecha[2])
 	end
 	   
 

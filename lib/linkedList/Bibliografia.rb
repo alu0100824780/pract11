@@ -79,12 +79,14 @@ module Bibliografia
 
 
 	def get_APA_date
-	    "(" + @Fecha_Publication.to_s + ")"
+	    "(" + @Fecha_Publication.year.to_s + ")"
         end
 
 	def get_APA_title
 	    @Title
 	end
+
+
 
 
 	def get_APA
@@ -93,6 +95,7 @@ module Bibliografia
             a += "\n"
             a
 	end
+
 
 	# PRáctica 11
 
@@ -103,6 +106,10 @@ module Bibliografia
 
 	def title(tit)
 		set_title(tit)
+	end
+
+	def publication(fecha)
+		set_publication(fecha[0],fecha[1],fecha[2])
 	end
 	   
 
