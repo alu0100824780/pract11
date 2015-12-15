@@ -39,6 +39,23 @@ describe "Practica 11 : Metaprogramming" do
 		expect(@book.get_ISBN).to eq "ISBN-10: 1430218339"
 	end
 
+	it "can create Book with all information comfortably" do
+		@book = Bibliografia::Book.new do
+			title "Ruby Programming"
+
+			author "Rudolf Cicko", 
+			       "Eleazar Diaz Delgado",
+			       "Daniel Darias"
+
+			publication [14,12,2015]
+
+			editorial "Programming Languages"
+
+			isbn "ISBN-10: 1231231234"
+		end
+		expect(@book.get_APA).to eq "Cicko, R. & Diaz Delgado, E. & Darias, D. (2015). Ruby Programming. Editorial Programming Languages. ISBN-10 1231231234"
+	end
+
 	
 end
 		 	
