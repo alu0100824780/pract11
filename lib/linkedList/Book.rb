@@ -13,11 +13,17 @@ module Bibliografia
 	        end
 
 		def get_ISBN
-		    @ISBN
+		    @ISBN + ". "
 		end
 
 		def isbn(is)
 		    add_ISBN(is)
+		end
+
+		def apa
+		   a = get_APA
+		   a += get_ISBN
+		   a
 		end
 	
 	end

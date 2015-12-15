@@ -6,7 +6,6 @@ module Bibliografia
 		
 		def initialize
 		    super
-	            @ISBN = ['caca']
 		end
 
 	        def add_ISBN(num)
@@ -14,11 +13,19 @@ module Bibliografia
 	        end
 
 		def get_ISBN
-		    @ISBN
+		    @ISBN + ". "
 		end
 
 		def isbn(is)
 		    add_ISBN(is)
+		end
+
+		def get_APA
+                   puts "Hola"
+		   puts super.class
+		   a = get_APA
+		   a += get_ISBN
+		   a
 		end
 	
 	end
