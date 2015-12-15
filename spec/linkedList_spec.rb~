@@ -32,6 +32,13 @@ describe "Practica 11 : Metaprogramming" do
 		expect(@book.get_APA_editorial).to eq "Anaya"
 	end
 
+	it "can create Book with ISBN number" do
+		@book = Bibliografia::Book.new do
+			isbn "ISBN-10: 1430218339"
+		end
+		expect(@book.get_ISBN).to eq "ISBN-10: 1430218339"
+	end
+
 	
 end
 		 	
