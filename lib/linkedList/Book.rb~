@@ -20,9 +20,7 @@ module Bibliografia
 		    add_ISBN(is)
 		end
 
-		def get_APA
-                   puts "Hola"
-		   puts super.class
+		def apa
 		   a = get_APA
 		   a += get_ISBN
 		   a

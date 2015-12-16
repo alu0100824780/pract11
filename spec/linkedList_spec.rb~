@@ -53,11 +53,10 @@ describe "Practica 11 : Metaprogramming" do
 
 			isbn "ISBN-10: 1231231234"
 		end
-		expect(@book.apa).to eq "Cicko, R. & Diaz Delgado, E. & Darias, D. (2015). Ruby Programming. Editorial Programming Languages. ISBN-10 1231231234. "
+		expect(@book.apa).to eq "Cicko, R. & Diaz Delgado, E. & Darias, D. (2015). Ruby Programming. Editorial Programming Languages. ISBN-10: 1231231234. "
 	end
 
 	
 end
 		 	
-
 
