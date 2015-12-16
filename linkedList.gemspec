@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'linkedList/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "linkedList"
+  spec.name          = "linkedList_Rudolf"
   spec.version       = LinkedList::VERSION
   spec.authors       = ["Rudolf Cicko"]
   spec.email         = ["alu0100824780@ull.edu.es"]
